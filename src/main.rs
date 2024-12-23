@@ -14,7 +14,7 @@ impl TaskProcessor for IDAProcessor {
     type TaskOutput = PathBuf;
 
     fn process_task(&mut self, _id: Uuid, input: PathBuf) -> Result<PathBuf, (PathBuf, String)> {
-        match IDB::open_with(&input, true) {
+        match IDB::open_with(&input, true, true) {
             Ok(_) => Ok(input),
             Err(e) => Err((input, e.to_string()))
         }

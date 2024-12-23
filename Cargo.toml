@@ -5,8 +5,8 @@ edition = "2021"
 build = "build.rs"
 
 [dependencies]
-idalib = "0.1"
+idalib = "0.4"
 fugue-mptp = "0.3"
 
 [build-dependencies]
-idalib-build = "0.1"
+idalib-build = "0.4"
